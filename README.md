@@ -31,7 +31,7 @@ Note that the noble has to be run as root on most of Linux environments. Though 
 
 ```
 $ cd ~
-$ npm install bytemind-de/noble
+$ npm install @abandonware/noble
 $ npm install bytemind-de/node-beacon-scanner
 ```
 
@@ -97,7 +97,7 @@ This sample code shows how to start scanning in a manner which will work even af
 
 ```JavaScript
 const BeaconScanner = require('bytemind-de/node-beacon-scanner');
-const noble = require('bytemind-de/noble');
+const noble = require('@abandonware/noble');
 const scanner = new BeaconScanner({'noble': noble});
 
 // Set an Event handler for the Bluetooth service
@@ -149,7 +149,7 @@ The sample code below shows how to pass a `Nobel` object to the `Linking` constr
 
 ```JavaScript
 // Create a Noble object
-const noble = require('bytemind-de/noble');
+const noble = require('@abandonware/noble');
 
 // Create a Linking object
 const BeaconScanner = require('bytemind-de/node-beacon-scanner');
