@@ -54,7 +54,7 @@ $ npm install bytemind-de/node-beacon-scanner
 This sample code shows how to start scanning and how to get parsed packets.
 
 ```JavaScript
-const BeaconScanner = require('bytemind-de/node-beacon-scanner');
+const BeaconScanner = require('node-beacon-scanner');
 const scanner = new BeaconScanner();
 
 // Set an Event handler for becons
@@ -96,7 +96,7 @@ Started to scan.
 This sample code shows how to start scanning in a manner which will work even after the Bluetooth service restarts.
 
 ```JavaScript
-const BeaconScanner = require('bytemind-de/node-beacon-scanner');
+const BeaconScanner = require('node-beacon-scanner');
 const noble = require('@abandonware/noble');
 const scanner = new BeaconScanner({'noble': noble});
 
@@ -128,7 +128,7 @@ scanner.startScan().then(() => {
 In order to use the node-beacon-scanner, you have to load the node-beacon-scanner module as follows:
 
 ```JavaScript
-const BeaconScanner = require('bytemind-de/node-beacon-scanner');
+const BeaconScanner = require('node-beacon-scanner');
 ```
 
 You can get an `BeaconScanner` constructor from the code above. Then you have to create an `BeaconScanner` object from the `BeaconScanner` constructor as follows:
@@ -152,7 +152,7 @@ The sample code below shows how to pass a `Nobel` object to the `Linking` constr
 const noble = require('@abandonware/noble');
 
 // Create a Linking object
-const BeaconScanner = require('bytemind-de/node-beacon-scanner');
+const BeaconScanner = require('node-beacon-scanner');
 const scanner = new BeaconScanner({'noble': noble});
 ```
 
