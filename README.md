@@ -1,5 +1,7 @@
 node-beacon-scanner
 ===============
+   
+**NOTE: This is a fork of futomi/node-beacon-scanner to support newer versions of Node.js via updated noble dependency.**
 
 The node-beacon-scanner is a Node.js module which allows you to scan BLE beacon packets and parse the packet data. This module supports iBeacon, Eddystone, and Estimote.
 
@@ -15,12 +17,12 @@ The supported beacon data formats are as follows:
 
 ## Dependencies
 
-* [Node.js](https://nodejs.org/en/) 6 +
-* [noble](https://github.com/sandeepmistry/noble)
+* [Node.js](https://nodejs.org/en/) 6 + (support for version 9+ are experimental)
+* [noble](https://github.com/bytemind-de/noble)
 
-See the document of the [noble](https://github.com/sandeepmistry/noble) for details on installing the [noble](https://github.com/sandeepmistry/noble).
+See the document of the [noble](https://github.com/bytemind-de/noble) for details on installing the [noble](https://github.com/bytemind-de/noble).
 
-Note that the noble has to be run as root on most of Linux environments. Though the default user of Raspbian `pi` can run the noble on Raspbian, normal users can not access the BLE using the noble generally. See the document of the [noble](https://github.com/sandeepmistry/noble) for details.
+Note that the noble has to be run as root on most of Linux environments. Though the default user of Raspbian `pi` can run the noble on Raspbian, normal users can not access the BLE using the noble generally. See the document of the [noble](https://github.com/bytemind-de/noble) for details.
 
 ## Installation
 
@@ -92,7 +94,7 @@ This sample code shows how to start scanning in a manner which will work even af
 
 ```JavaScript
 const BeaconScanner = require('node-beacon-scanner');
-const noble = require('noble');
+const noble = require('bytemind-de/noble');
 const scanner = new BeaconScanner({'noble': noble});
 
 // Set an Event handler for the Bluetooth service
