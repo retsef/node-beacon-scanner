@@ -18,9 +18,12 @@ The supported beacon data formats are as follows:
 ## Dependencies
 
 * [Node.js](https://nodejs.org/en/) 6 + (support for version 9+ are experimental)
-* [noble](https://github.com/bytemind-de/noble)
+* [noble](https://github.com/bytemind-de/noble) (fixed for Node.js 9+)
 
-See the document of the [noble](https://github.com/bytemind-de/noble) for details on installing the [noble](https://github.com/bytemind-de/noble).
+See the documentation of [noble](https://github.com/bytemind-de/noble) for installation details. Use e.g.:
+```
+sudo apt-get install bluetooth bluez libbluetooth-dev libudev-dev
+```
 
 Note that the noble has to be run as root on most of Linux environments. Though the default user of Raspbian `pi` can run the noble on Raspbian, normal users can not access the BLE using the noble generally. See the document of the [noble](https://github.com/bytemind-de/noble) for details.
 
@@ -28,8 +31,8 @@ Note that the noble has to be run as root on most of Linux environments. Though 
 
 ```
 $ cd ~
-$ npm install noble
-$ npm install node-beacon-scanner
+$ npm install bytemind-de/noble
+$ npm install bytemind-de/node-beacon-scanner
 ```
 
 ---------------------------------------
